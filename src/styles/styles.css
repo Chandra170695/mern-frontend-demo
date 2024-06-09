@@ -1,0 +1,254 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.container {
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Character list styles */
+.character-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.character-table th, .character-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.character-table th {
+  background-color: #f4f4f4;
+}
+
+.show-more-button {
+  padding: 5px 10px;
+  background-color: #0B3984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  background-color: #0B3984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+.close-button {
+  padding: 10px 20px;
+  background-color: #0B3984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+/* Signin, Signup, and Forgot Password styles */
+.signin-container, .signup-container, .forgot-password-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+
+.signin-card, .signup-card, .forgot-password-card {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  float: right;
+  color: #0B3984;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.signin-button, .signup-button, .reset-password-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0B3984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signin-button:disabled, .signup-button:disabled, .reset-password-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.signin-button:hover:enabled, .signup-button:hover:enabled, .reset-password-button:hover:enabled {
+  background-color: #0056b3;
+}
+
+.signup-link, .signin-link, .help-link {
+  margin-top: 20px;
+  color: #555;
+}
+
+.signup-link a, .signin-link a, .help-link a {
+  color: #0B3984;
+  text-decoration: none;
+}
+
+.signup-link a:hover, .signin-link a:hover, .help-link a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.header {
+  color: #0C111D;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+}
+
+.header-desc {
+  color: #475467;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.form-label {
+  color: #718096;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.input-label {
+  padding: 14px 16px;
+  border-radius: 6px;
+  border: 1px solid #E0E5EB;
+  background: #FFF;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.success,.success-message,.message
+{
+  color:green
+}
