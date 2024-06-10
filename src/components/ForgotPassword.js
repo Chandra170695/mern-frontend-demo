@@ -36,7 +36,7 @@ const ForgotPassword = () => {
     try {
       const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/forgot-password`, { email });
       if (res.data.resetToken) {
-        const resetUrl = `http://localhost:3000/reset-password/${res.data.resetToken}`;
+        const resetUrl = `/reset-password/${res.data.resetToken}`;
         setResetLink(resetUrl);
         setMessage('A reset link has been generated. Click the link below to reset your password.()');
       } else {
