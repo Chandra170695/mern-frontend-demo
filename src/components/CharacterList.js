@@ -71,7 +71,7 @@ const CharacterList = () => {
       <table className="character-table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Name Value</th>
             <th>Height</th>
             <th>Mass</th>
             <th>Birth Year</th>
